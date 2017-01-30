@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode8
+notifications:
+  email: false
+before_install:
+- brew update || brew update
+- gem install scan
+- scan --version
+install: true
+script:
+- scan -p "RealmResultsController.xcodeproj" -s "RealmResultsController-iOS"
